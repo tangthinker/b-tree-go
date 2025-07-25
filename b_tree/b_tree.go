@@ -2,7 +2,7 @@ package b_tree
 
 type Node[T comparable] struct {
 	kvs      []KV[T]
-	pointers []*Node[T]
+	children []*Node[T]
 }
 
 type KV[T comparable] struct {
@@ -28,6 +28,18 @@ func (t *BTree[T]) Insert(k T, v any) {
 				{k, v},
 			},
 		}
+		return
+	}
+	if t.root.children == nil {
+
 	}
 
+}
+
+func (t *BTree[T]) Delete(k T) {
+
+}
+
+func (t *BTree[T]) Search(k T) any {
+	return nil
 }
